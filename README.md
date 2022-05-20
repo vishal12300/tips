@@ -1,5 +1,7 @@
+# Tips 
+
 ------
-# Easy Stored XSS & HTML Injection 
+### Easy Stored XSS & HTML Injection 
 
 * Payload
 ```
