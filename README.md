@@ -33,3 +33,9 @@ subfinder -d http://target.com | httpx -silent | sed 's/$/\/?__proto__[testparam
 naabu -l /disk/output/example.com/host.txt  -tp 1000 -sa | httpx -retries 4 -timeout 10 -title -ip
 
 ```
+--------
+[https://bugbountyguide.org/index.php/2022/11/26/8-best-recon-technique-for-active-subdomain-enumeration/](https://bugbountyguide.org/index.php/2022/11/26/8-best-recon-technique-for-active-subdomain-enumeration/)
+
+```
+uncover -shodan 'http.component:"Grafana"' -censys 'services.software.product=`Grafana`' -fofa 'app="Grafana"' -quake 'Grafana' -hunter 'Grafana' -zoomeye 'app:"Grafana"' -netlas 'Grafana'
+``` 
